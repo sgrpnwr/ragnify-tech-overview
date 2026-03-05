@@ -97,10 +97,12 @@
       transition: background .2s, border-color .2s, transform .15s;
     }
     .slide-inner {
-      width: min(1260px, 95vw);
-      max-height: 95vh;
+      width: min(900px, 90vw);
+      max-height: 90vh;
       overflow: hidden;
       position: relative;
+      transform: scale(1.5);
+      transform-origin: center;
     }
 
     /* Stagger children */
@@ -1008,83 +1010,35 @@
       line-height: 1.6;
     }
 
-    /* ─── SLIDE 11 — Tech Stack ─── */
-    #s11 .stack-table {
+    /* ─── SLIDE 11 — Roadmap ─── */
+    #s11-roadmap .roadmap-grid {
       display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    #s11 .stack-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      transition: background .25s, border-color .25s, transform .2s;
-    }
-
-    #s11 .stack-row:hover {
-      background: var(--card-hover);
-      border-color: rgba(0, 212, 255, .35);
-      transform: translateX(5px);
-    }
-
-    #s11 .stack-key {
-      font-family: var(--mono);
-      font-size: .77rem;
-      color: var(--muted);
-      min-width: 160px;
-    }
-
-    #s11 .stack-val {
-      font-size: .88rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    #s11 .stack-badge {
-      margin-left: auto;
-      font-family: var(--mono);
-      font-size: .68rem;
-      padding: 3px 8px;
-      border-radius: 20px;
-      background: rgba(0, 212, 255, .1);
-      border: 1px solid rgba(0, 212, 255, .2);
-      color: var(--cyan);
-      white-space: nowrap;
-    }
-
-    /* ─── SLIDE 12 — Roadmap ─── */
-    #s12-roadmap .roadmap-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    #s12-roadmap .rm-col {
+    #s11-roadmap .rm-col {
       padding: 22px;
       border-radius: 14px;
       background: var(--card);
       border: 1px solid var(--border);
       transition: background .25s, transform .2s, box-shadow .2s;
+      width: 100%;
+      max-width: 600px;
     }
 
-    #s12-roadmap .rm-now:hover {
+    #s11-roadmap .rm-now:hover {
       border-color: rgba(16, 185, 129, .4);
       box-shadow: 0 12px 36px rgba(16, 185, 129, .1);
       transform: translateY(-4px);
     }
 
-    #s12-roadmap .rm-next:hover {
+    #s11-roadmap .rm-next:hover {
       border-color: rgba(251, 191, 36, .4);
       box-shadow: 0 12px 36px rgba(251, 191, 36, .1);
       transform: translateY(-4px);
     }
 
-    #s12-roadmap .rm-phase {
+    #s11-roadmap .rm-phase {
       font-family: var(--mono);
       font-size: .72rem;
       letter-spacing: .1em;
@@ -1095,32 +1049,32 @@
       display: inline-block;
     }
 
-    #s12-roadmap .rm-now .rm-phase {
+    #s11-roadmap .rm-now .rm-phase {
       background: rgba(16, 185, 129, .12);
       color: var(--green);
       border: 1px solid rgba(16, 185, 129, .25);
     }
 
-    #s12-roadmap .rm-next .rm-phase {
+    #s11-roadmap .rm-next .rm-phase {
       background: rgba(251, 191, 36, .12);
       color: var(--yellow);
       border: 1px solid rgba(251, 191, 36, .25);
     }
 
-    #s12-roadmap .rm-items {
+    #s11-roadmap .rm-items {
       display: flex;
       flex-direction: column;
       gap: 9px;
     }
 
-    #s12-roadmap .rm-item {
+    #s11-roadmap .rm-item {
       display: flex;
       gap: 10px;
       align-items: flex-start;
       font-size: .84rem;
     }
 
-    #s12-roadmap .rm-dot {
+    #s11-roadmap .rm-dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -1128,20 +1082,20 @@
       margin-top: 6px;
     }
 
-    #s12-roadmap .rm-now .rm-dot {
+    #s11-roadmap .rm-now .rm-dot {
       background: var(--green);
     }
 
-    #s12-roadmap .rm-next .rm-dot {
+    #s11-roadmap .rm-next .rm-dot {
       background: var(--yellow);
     }
 
-    /* ─── SLIDE 13 — Closing ─── */
-    #s13 {
+    /* ─── SLIDE 12 — Closing ─── */
+    #s12 {
       overflow: hidden;
     }
 
-    #s13 .orb:nth-child(1) {
+    #s12 .orb:nth-child(1) {
       width: 500px;
       height: 500px;
       top: -120px;
@@ -1149,7 +1103,7 @@
       animation-duration: 10s;
     }
 
-    #s13 .orb:nth-child(2) {
+    #s12 .orb:nth-child(2) {
       width: 300px;
       height: 300px;
       bottom: -80px;
@@ -1158,14 +1112,14 @@
       animation-delay: -2s;
     }
 
-    #s13 .close-inner {
+    #s12 .close-inner {
       position: relative;
       z-index: 2;
       text-align: center;
       padding: 60px 40px;
     }
 
-    #s13 .close-logo {
+    #s12 .close-logo {
       font-size: clamp(3.5rem, 9vw, 7rem);
       font-weight: 700;
       line-height: 1.0;
@@ -1174,26 +1128,27 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-bottom: 12px;
+      padding: 0.1em 0.05em;
     }
 
-    #s13 .close-sub {
+    #s12 .close-sub {
       font-size: clamp(.9rem, 2vw, 1.1rem);
       color: rgba(226, 232, 240, .55);
       margin-bottom: 40px;
     }
 
-    #s13 .close-cta {
+    #s12 .close-cta {
       font-size: clamp(1.2rem, 2.5vw, 1.8rem);
       font-weight: 600;
       margin-bottom: 10px;
     }
 
-    #s13 .close-q {
+    #s12 .close-q {
       color: var(--cyan);
       font-style: italic;
     }
 
-    #s13 .close-badges {
+    #s12 .close-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -1201,7 +1156,7 @@
       margin-top: 36px;
     }
 
-    #s13 .close-badge {
+    #s12 .close-badge {
       font-family: var(--mono);
       font-size: 11px;
       padding: 8px 16px;
@@ -1212,7 +1167,7 @@
       transition: border-color .2s, background .2s, transform .2s;
     }
 
-    #s13 .close-badge:hover {
+    #s12 .close-badge:hover {
       border-color: var(--cyan);
       background: rgba(0, 212, 255, .1);
       transform: translateY(-3px);
@@ -1649,62 +1604,21 @@
       </div>
     </div>
 
-    <!-- ══ SLIDE 11 — Tech Stack ══ -->
-    <div class="slide" id="s11">
+    <!-- ══ SLIDE 11 — Roadmap ══ -->
+    <div class="slide" id="s11-roadmap">
       <div class="slide-inner">
         <div class="section-num reveal">11</div>
-        <div class="slide-title reveal">Technology Stack</div>
-        <div class="stack-table reveal">
-          <div class="stack-row"><span class="stack-key">Mobile / Web Client</span><span class="stack-val">Expo · React
-              Native</span><span class="stack-badge">Frontend</span></div>
-          <div class="stack-row"><span class="stack-key">API Gateway</span><span class="stack-val">Node.js · Express ·
-              Helmet · CORS</span><span class="stack-badge">Gateway</span></div>
-          <div class="stack-row"><span class="stack-key">Auth Service</span><span class="stack-val">Node.js · JWT ·
-              bcrypt · MongoDB</span><span class="stack-badge">Auth</span></div>
-          <div class="stack-row"><span class="stack-key">File Service</span><span class="stack-val">Node.js · AWS S3 ·
-              HMAC</span><span class="stack-badge">Storage</span></div>
-          <div class="stack-row"><span class="stack-key">Embedding Service</span><span class="stack-val">Node.js ·
-              Pinecone · pdf-parse · OpenAI</span><span class="stack-badge">AI</span></div>
-          <div class="stack-row"><span class="stack-key">SDK Service</span><span class="stack-val">Node.js · MongoDB ·
-              API Key management</span><span class="stack-badge">SDK</span></div>
-          <div class="stack-row"><span class="stack-key">Message Queue</span><span class="stack-val">Apache Kafka ·
-              Zookeeper</span><span class="stack-badge">Messaging</span></div>
-          <div class="stack-row"><span class="stack-key">Databases</span><span class="stack-val">MongoDB · Redis ·
-              Pinecone (Vector DB)</span><span class="stack-badge">Data</span></div>
-          <div class="stack-row"><span class="stack-key">Infrastructure</span><span class="stack-val">GKE · Docker ·
-              docker-compose</span><span class="stack-badge">DevOps</span></div>
-          <div class="stack-row"><span class="stack-key">Cloud</span><span class="stack-val">AWS S3 · AWS Secrets
-              Manager · ap-south-1</span><span class="stack-badge">Cloud</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ══ SLIDE 12 — Roadmap ══ -->
-    <div class="slide" id="s12-roadmap">
-      <div class="slide-inner">
-        <div class="section-num reveal">12</div>
         <div class="slide-title reveal">Roadmap — What's Next</div>
         <div class="slide-sub reveal">Planned features and improvements on the horizon</div>
         <div class="roadmap-grid reveal">
-          <div class="rm-col rm-now">
-            <div class="rm-phase">Now — Shipped</div>
-            <div class="rm-items">
-              <div class="rm-item"><span class="rm-dot"></span><span>RAG pipeline: upload → embed → chat</span></div>
-              <div class="rm-item"><span class="rm-dot"></span><span>Dual auth: JWT + SDK API keys</span></div>
-              <div class="rm-item"><span class="rm-dot"></span><span>HMAC tenant request signing</span></div>
-              <div class="rm-item"><span class="rm-dot"></span><span>Kafka async embedding flow</span></div>
-              <div class="rm-item"><span class="rm-dot"></span><span>GKE deployment + Docker</span></div>
-            </div>
-          </div>
           <div class="rm-col rm-next">
-            <div class="rm-phase">Next — In Progress</div>
+            <div class="rm-phase">Next Features/Improvements planned</div>
             <div class="rm-items">
               <div class="rm-item"><span class="rm-dot"></span><span>Add DLQ / better error handling in Kafka</span>
               </div>
               <div class="rm-item"><span class="rm-dot"></span><span>Improve RAG with conversation history</span></div>
               <div class="rm-item"><span class="rm-dot"></span><span>Multiple file upload support</span></div>
               <div class="rm-item"><span class="rm-dot"></span><span>Streaming chat responses (SSE)</span></div>
-              <div class="rm-item"><span class="rm-dot"></span><span>Admin dashboard improvements</span></div>
               <div class="rm-item"><span class="rm-dot"></span><span>Better logging / analytics with Grafana +
                   Prometheus</span></div>
               <div class="rm-item"><span class="rm-dot"></span><span>Better Kubernetes scaling</span></div>
@@ -1714,8 +1628,8 @@
       </div>
     </div>
 
-    <!-- ══ SLIDE 13 — Closing ══ -->
-    <div class="slide" id="s13">
+    <!-- ══ SLIDE 12 — Closing ══ -->
+    <div class="slide" id="s12">
       <div class="slide-inner">
         <div class="orb orb-cyan" style="width:500px;height:500px;top:-120px;left:-100px"></div>
         <div class="orb orb-purple" style="width:300px;height:300px;bottom:-80px;right:-60px;animation-delay:-2s"></div>
