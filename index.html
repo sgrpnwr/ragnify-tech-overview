@@ -86,7 +86,16 @@
       pointer-events: all;
       transform: translateY(0);
     }
-
+    .diagram-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: .85rem;
+      color: var(--cyan);
+      border: 1px solid rgba(0, 212, 255, .25);
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: background .2s, border-color .2s, transform .15s;
+    }
     .slide-inner {
       width: min(1260px, 95vw);
       max-height: 95vh;
@@ -1512,6 +1521,7 @@
           <div class="diagram-title">System Architecture Visual</div>
           <div class="diagram-sub">Diagram from original presentation — showing full microservices
             topology,<br>service-to-service communication, and data flow across the Ragnify platform.</div>
+            <a target="_blank" class="diagram-link" href="https://app.eraser.io/workspace/YwigomygbId7Q4k9F0Z9?origin=share">Check this out</a>
         </div>
       </div>
     </div>
